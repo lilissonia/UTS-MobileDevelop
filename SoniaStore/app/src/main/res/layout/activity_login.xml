@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF2E2E2E"
+    android:padding="@dimen/far"
+    tools:context=".activity.login.LoginActivity">
+
+    <Button
+        android:id="@+id/btLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etLoginPassword"
+        android:layout_alignEnd="@id/etLoginPassword"
+        android:background="@drawable/background_dark"
+        android:text="Masuk"
+        android:textColor="@color/colorFree" />
+
+    <EditText
+        android:id="@+id/etLoginPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etLoginUsername"
+        android:layout_marginTop="@dimen/normal"
+        android:layout_marginBottom="@dimen/high"
+        android:background="@drawable/background_light"
+        android:hint="password"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/etLoginUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/background_light"
+        android:hint="username" />
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_above="@id/etLoginUsername"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/normal"
+        android:src="@drawable/logo1" />
+
+
+    <TextView
+        android:id="@+id/goRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etLoginPassword"
+        android:layout_alignBaseline="@id/btLogin"
+        android:hint="Daftar sekarang"
+        android:padding="@dimen/normal"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF" />
+
+
+</RelativeLayout>

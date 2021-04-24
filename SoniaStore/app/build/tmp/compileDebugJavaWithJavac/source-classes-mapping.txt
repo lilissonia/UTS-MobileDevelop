@@ -1,0 +1,2 @@
+id/rdev/soniastore/BuildConfig.java
+ id.rdev.soniastore.BuildConfig

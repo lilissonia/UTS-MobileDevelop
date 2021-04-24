@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:name="id.rdev.catatanpenjualan.activity.report.detail.DetailReportFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2E2E2E"
+    android:padding="@dimen/small"
+    tools:context=".activity.report.detail.DetailReportFragment">
+
+    <TextView
+        android:id="@+id/tvTitleReport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#6F6FE8"
+        android:padding="@dimen/normal"
+        android:text="Report Detail"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTitleReport"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="@dimen/normal"
+        android:text="TERJUAL"
+        android:textColor="#6F6FE8" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTitleReport"
+        android:layout_alignParentEnd="true"
+        android:paddingRight="@dimen/normal"
+        android:text="Tanggal : 18-03-2019"
+        android:textColor="#6F6FE8" />
+
+    <TextView
+        android:id="@+id/qty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/normal"
+        android:text="Qty: "
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tvQty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/qty"
+        android:layout_toRightOf="@id/qty"
+        android:text="12"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/normal"
+        android:layout_marginEnd="@dimen/normal"
+        android:layout_toEndOf="@id/tvQty"
+        android:text="Total: "
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tvGrandTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/total"
+        android:text="Rp. 230.000"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/tvGrandTotal"
+        android:layout_below="@id/tvDate"
+        android:layout_marginStart="@dimen/high"
+
+        android:layout_marginTop="@dimen/high"
+        android:layout_marginEnd="@dimen/high"
+        android:layout_marginBottom="@dimen/high"
+        android:background="#2E2E2E"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_keranjang" />
+
+</RelativeLayout>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF2E2E2E"
+    tools:context=".activity._main.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/report"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/high"
+        android:background="#FF2E2E2E"
+        android:orientation="horizontal"
+        android:padding="@dimen/normal">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="@dimen/normal">
+
+            <TextView
+                android:id="@+id/lastDay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/small"
+                android:text="0"
+                android:textAlignment="center"
+                android:textColor="#6F6FE8" />
+
+            <TextView
+                android:id="@+id/nowDay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/small"
+                android:text="0"
+                android:textAlignment="center"
+                android:textColor="#6F6FE8"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimary" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="@dimen/normal">
+
+            <TextView
+                android:id="@+id/lastWeek"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/small"
+                android:text="0"
+                android:textAlignment="center"
+                android:textColor="#6F6FE8" />
+
+            <TextView
+                android:id="@+id/nowWeek"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/small"
+                android:text="0"
+                android:textAlignment="center"
+                android:textColor="#6F6FE8"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimary" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="@dimen/normal">
+
+            <TextView
+                android:id="@+id/lastMonth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/small"
+                android:text="0"
+                android:textAlignment="center"
+                android:textColor="#6F6FE8"
+                android:textColorLink="#6F6FE8" />
+
+            <TextView
+                android:id="@+id/nowMonth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/small"
+                android:text="0"
+                android:textAlignment="center"
+                android:textColor="#6F6FE8"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimary" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvWelcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/report"
+        android:fontFamily="sans-serif-light"
+        android:text="Your Name"
+        android:textAlignment="center"
+        android:textColor="#6F6FE8"
+        android:textColorHint="#6F6FE8"
+        android:textSize="32sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mainMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/report"
+        android:layout_centerHorizontal="true"
+        android:padding="@dimen/high"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="3"
+        tools:listitem="@layout/item_menu" />
+
+</RelativeLayout>
